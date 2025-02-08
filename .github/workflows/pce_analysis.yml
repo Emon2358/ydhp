@@ -1,0 +1,22 @@
+name: PCE ROM Hidden Password Extractor
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run Password Extraction
+        run: |
+          python main.py Youkai Douchuuki (Japan).pce
