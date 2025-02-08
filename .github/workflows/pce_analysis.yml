@@ -19,4 +19,4 @@ jobs:
 
       - name: Run Password Extraction
         run: |
-          python main.py Youkai Douchuuki (Japan).pce
+          python main.py "Youkai Douchuuki (Japan).pce"
